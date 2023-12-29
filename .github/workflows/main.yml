@@ -28,3 +28,7 @@ jobs:
       # List the accessible secrets within the AWS account.
       - run: aws secretsmanager list-secrets
         shell: bash
+
+      # Read the secret from secretsmanager.
+      - run: aws secretsmanager get-secret-value --secret-id arn:aws:secretsmanager:us-east-1:619346007778:secret:flag_sts_lab_2-QH9PJ7
+        shell: bash
